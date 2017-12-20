@@ -8,7 +8,7 @@ import java.util.List;
 
 public class GentlePalette {
 
-    static void generate(int colorInt, String baseColors[], OnColorRoundingDone onColorRoundingDone) {
+    public static void generate(int colorInt, String baseColors[], OnColorRoundingDone onColorRoundingDone) {
         onColorRoundingDone.onDone(Color.parseColor(getSimilarColor(String.format("#%06X", (0xFFFFFF & colorInt)), baseColors)));
     }
 
