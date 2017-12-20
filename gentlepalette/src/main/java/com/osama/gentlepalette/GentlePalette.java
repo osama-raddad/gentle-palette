@@ -6,12 +6,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class GentlePalette {
-
-
+public class GentlePalette {
 
     static void generate(int colorInt, String baseColors[], OnColorRoundingDone onColorRoundingDone) {
-        onColorRoundingDone.onDone(Color.parseColor( getSimilarColor(String.format("#%06X", (0xFFFFFF & colorInt)), baseColors)));
+        onColorRoundingDone.onDone(Color.parseColor(getSimilarColor(String.format("#%06X", (0xFFFFFF & colorInt)), baseColors)));
     }
 
 
