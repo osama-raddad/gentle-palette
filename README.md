@@ -6,6 +6,7 @@
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb5b2ab070a045589f8ece28b6bd2ba8)](https://www.codacy.com/app/osama-s-raddad/gentle-palette?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=osama-raddad/gentle-palette&amp;utm_campaign=Badge_Grade)
  [![](https://jitpack.io/v/osama-raddad/gentle-palette.svg)](https://jitpack.io/#osama-raddad/gentle-palette)
  <img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg"/>
+ <img src="https://img.shields.io/badge/dependencies-0-blue.svg"/>
 
 # Gentle Palette
 
