@@ -1,5 +1,8 @@
- <center><img src="https://raw.githubusercontent.com/osama-raddad/gentle-palette/master/logo.png" alt="logo"/></center>
- 
+ <p align="center">
+      <img src="https://raw.githubusercontent.com/osama-raddad/gentle-palette/master/logo.png" alt="logo"/>
+</p>
+<br/>
+ <p align="center">
 <a href='https://ko-fi.com/A4763RZL' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -7,11 +10,19 @@
  [![](https://jitpack.io/v/osama-raddad/gentle-palette.svg)](https://jitpack.io/#osama-raddad/gentle-palette)
  <img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg"/>
  <img src="https://img.shields.io/badge/dependencies-0-blue.svg"/>
+</p>
 
 # Gentle Palette
 
 Gentle Palette is a color rounding tool is meant to work with the android palette support library or any color :wink:
 it works by rounding any given hex color to its nearest color in predefined colors array (color palette).
+
+## Screen Shots
+
+<img src="https://raw.githubusercontent.com/osama-raddad/gentle-palette/master/device-2017-12-25-144441.png" width="200"/>|
+<img src="https://raw.githubusercontent.com/osama-raddad/gentle-palette/master/device-2017-12-25-144527.png" width="200"/>|
+<img src="https://raw.githubusercontent.com/osama-raddad/gentle-palette/master/device-2017-12-25-144620.png" width="200"/>|
+<img src="https://raw.githubusercontent.com/osama-raddad/gentle-palette/master/device-2017-12-25-144719.png" width="200"/>
 
 
 ## Requirements
