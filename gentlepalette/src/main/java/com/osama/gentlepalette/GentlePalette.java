@@ -12,7 +12,6 @@ public class GentlePalette {
         onColorRoundingDone.onDone(Color.parseColor(getSimilarColor(String.format("#%06X", (0xFFFFFF & colorInt)), baseColors)));
     }
 
-
     private static String getSimilarColor(String color, String[] baseColors) {
         //Create an empty List for the difference between the colors
         List<Double> difference = new ArrayList<>();
@@ -35,8 +34,8 @@ public class GentlePalette {
 
             difference.add(Math.sqrt(
                     (r - baseR) * (r - baseR) +
-                            (g - baseG) * (g - baseG) +
-                            (b - baseB) * (b - baseB)
+                    (g - baseG) * (g - baseG) +
+                    (b - baseB) * (b - baseB)
             ));
         }
 
