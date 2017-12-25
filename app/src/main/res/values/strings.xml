@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Gentle Palette</string>
+    <string name="material_palette">Material Palette</string>
 </resources>
