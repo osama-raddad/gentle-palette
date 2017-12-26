@@ -68,7 +68,7 @@ Palettes.SOCIAL_COLORS
 
 ## Contributing
 
-We welcome contributions to FireCrasher!
+We welcome contributions to Gentle Palette!
 * ⇄ Pull requests and ★ Stars are always welcome.
 
 ### Let me know!
