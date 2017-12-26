@@ -3,13 +3,17 @@
 </p>
 <br/>
  <p align="center">
-<a href='https://ko-fi.com/A4763RZL' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+	<a href='https://ko-fi.com/A4763RZL'> <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffe!-please-blue.svg?style=for-the-badge"/></a>
+<br/>
+<a href='https://www.linkedin.com/in/osamaraddad/'> <img src="https://img.shields.io/badge/Hire%20Me!-Osama%20Raddad-blue.svg?style=for-the-badge"/></a>
 
  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb5b2ab070a045589f8ece28b6bd2ba8)](https://www.codacy.com/app/osama-s-raddad/gentle-palette?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=osama-raddad/gentle-palette&amp;utm_campaign=Badge_Grade)
  [![](https://jitpack.io/v/osama-raddad/gentle-palette.svg)](https://jitpack.io/#osama-raddad/gentle-palette)
  <img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg"/>
  <img src="https://img.shields.io/badge/dependencies-0-blue.svg"/>
+
+ 
 </p>
 
 # Gentle Palette
