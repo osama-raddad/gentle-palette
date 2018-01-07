@@ -81,7 +81,7 @@ I’d be really happy if you sent me links to your projects where you use my lib
 
 ## License
 
-    Copyright 2016, Osama Raddad
+    Copyright 2017, Osama Raddad
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
