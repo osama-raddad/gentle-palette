@@ -31,4 +31,4 @@ before_script:
 script:
 # - ./gradlew clean
   - ./gradlew tasks
-  - ./gradlew compileDebug --stacktrace
+  - ./gradlew compileDebugSources --stacktrace
