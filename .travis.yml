@@ -30,4 +30,5 @@ before_script:
 # Only run tests on the main two OneBusAway brand flavors
 script:
 # - ./gradlew clean
+  - ./gradlew tasks
   - ./gradlew compileDebugKotlin --stacktrace
