@@ -15,31 +15,29 @@ Two Gradle modules:
 
 There are no unit or instrumentation tests in either module.
 
+## Toolchain
+
+- Gradle 9.6.1 (wrapper) with Android Gradle Plugin 9.2.1 — requires JDK 17+.
+- `compileSdk 37`, `minSdk 21`, `targetSdk 37` (app only; the library does not set a targetSdk), Java 17 source/target compatibility.
+- AndroidX (`androidx.appcompat` is the demo app's only external dependency).
+- Dependency and plugin versions are centralized in the version catalog `gradle/libs.versions.toml`; repositories are declared in `settings.gradle` (`google()`, `mavenCentral()`).
+- JitPack publishing is configured in `gentlepalette/build.gradle` via `maven-publish` with `singleVariant('release')`; verify it with `./gradlew :gentlepalette:publishToMavenLocal`.
+- CI is GitHub Actions (`.github/workflows/ci.yml`), running `./gradlew build` on JDK 21.
+
 ## Build Commands
 
 ```bash
-./gradlew compileDebugSources --stacktrace   # what CI runs (see .travis.yml)
+./gradlew build                              # full build incl. lint + release variants (what CI runs)
 ./gradlew :gentlepalette:assembleDebug       # build the library only
 ./gradlew :app:assembleDebug                 # build the demo app
-./gradlew clean                              # deletes the root build dir (custom task in root build.gradle)
+./gradlew :gentlepalette:publishToMavenLocal # verify the JitPack/maven-publish setup
+./gradlew clean
 ```
-
-## Legacy Toolchain — Important
-
-This project uses a 2017-era Android toolchain. Expect build failures on modern environments unless these constraints are respected:
-
-- Gradle wrapper 4.1 with Android Gradle Plugin 3.0.1 — requires **JDK 8** (CI uses `oraclejdk8`).
-- `compileSdkVersion 27`, `minSdkVersion 15`, `targetSdkVersion 27`, Java 8 source/target compatibility.
-- Uses the old **Android Support libraries** (`com.android.support:*:27.0.2`), not AndroidX.
-- Repositories include **jcenter()**, which has been sunset — dependency resolution may fail without migrating repositories or working from caches.
-- The demo app uses the deprecated `compile` configuration for the module dependency (`compile project(':gentlepalette')`).
-
-Do not upgrade the toolchain, migrate to AndroidX, or change SDK versions as a side effect of another task — treat that as its own explicitly requested change.
 
 ## Conventions
 
-- Library code lives under `gentlepalette/src/main/java/com/osama/gentlepalette/`; both modules share the `com.osama.gentlepalette` package.
+- Library code lives under `gentlepalette/src/main/java/com/osama/gentlepalette/`; both modules share the `com.osama.gentlepalette` Java package. The Gradle namespaces differ (`com.osama.gentlepalette` for the app, `com.osama.gentlepalette.lib` for the library) because two modules may not share a namespace — the library namespace only affects its generated `R`/manifest, not the public API package.
 - The library intentionally has **zero dependencies** (advertised in the README badge) — keep it that way.
 - Colors are passed around as `#RRGGBB` hex strings inside the library and as Android color ints at the API boundary; formatting back to hex uses `String.format("#%06X", 0xFFFFFF & color)`.
-- Version is tracked in `app/build.gradle` (`versionName "0.1.3"`), matching the JitPack release tag documented in the README.
+- Version is tracked in `app/build.gradle` (`versionName "0.1.3"`) and in the library's publishing block, matching the JitPack release tag documented in the README.
 - Licensed under Apache 2.0 (`LICENSE.md`).

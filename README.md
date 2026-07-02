@@ -10,8 +10,8 @@
  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb5b2ab070a045589f8ece28b6bd2ba8)](https://www.codacy.com/app/osama-s-raddad/gentle-palette?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=osama-raddad/gentle-palette&amp;utm_campaign=Badge_Grade)
  [![](https://jitpack.io/v/osama-raddad/gentle-palette.svg)](https://jitpack.io/#osama-raddad/gentle-palette)
- [![Build Status](https://travis-ci.org/osama-raddad/gentle-palette.svg?branch=master)](https://travis-ci.org/osama-raddad/gentle-palette)
- <img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg"/>
+ [![CI](https://github.com/osama-raddad/gentle-palette/actions/workflows/ci.yml/badge.svg)](https://github.com/osama-raddad/gentle-palette/actions/workflows/ci.yml)
+ <img src="https://img.shields.io/badge/API-21%2B-brightgreen.svg"/>
  <img src="https://img.shields.io/badge/dependencies-0-blue.svg"/>
 
  
@@ -32,7 +32,7 @@ it works by rounding any given hex color to its nearest color in predefined colo
 
 ## Requirements
 
-Min SDK version 15
+Min SDK version 21
 
 ## Install
 Add it in your root build.gradle at the end of repositories:
