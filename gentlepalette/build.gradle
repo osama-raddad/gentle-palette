@@ -1,17 +1,36 @@
-apply plugin: 'com.android.library'
+plugins {
+    alias(libs.plugins.android.library)
+    id 'maven-publish'
+}
 
 android {
-    compileSdkVersion 27
+    namespace 'com.osama.gentlepalette.lib'
+    compileSdk 37
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdk 21
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    publishing {
+        singleVariant('release')
+    }
+}
+
+// JitPack publishing (https://jitpack.io/#osama-raddad/gentle-palette)
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.osama-raddad'
+                artifactId = 'gentle-palette'
+                version = '0.1.3'
+            }
+        }
     }
 }
