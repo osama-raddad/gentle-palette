@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                         try {
                             findViewById(R.id.c1).setBackgroundColor(Color.parseColor(charSequence.toString()));
-                            GentlePalette.generate(Color.parseColor(((EditText) findViewById(R.id.in_color)).getText().toString()), Palettes.MATERIAL_COLORS, color -> setColor(color));
+                            setColor(GentlePalette.round(Color.parseColor(((EditText) findViewById(R.id.in_color)).getText().toString()), Palettes.MATERIAL_COLORS));
                         } catch (Exception ignored) {}
                     }
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void round(View view) {
         try {
             findViewById(R.id.c1).setBackgroundColor(Color.parseColor(((EditText) findViewById(R.id.in_color)).getText().toString()));
-            GentlePalette.generate(Color.parseColor(((EditText) findViewById(R.id.in_color)).getText().toString()), Palettes.MATERIAL_COLORS, this::setColor);
+            setColor(GentlePalette.round(Color.parseColor(((EditText) findViewById(R.id.in_color)).getText().toString()), Palettes.MATERIAL_COLORS));
         } catch (Exception e) {
             Toast.makeText(this, "please insert a color in #XXXXXX format", Toast.LENGTH_LONG).show();
         }

@@ -1,9 +1,11 @@
 [versions]
 agp = "9.2.1"
 appcompat = "1.7.1"
+junit = "4.13.2"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

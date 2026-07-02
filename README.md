@@ -49,7 +49,7 @@ Step 2. Add the dependency
 
 ```js
 	dependencies {
-	        implementation 'com.github.osama-raddad:gentle-palette:0.1.3'
+	        implementation 'com.github.osama-raddad:gentle-palette:0.2.0'
 	}
 ```
 
@@ -58,8 +58,10 @@ Step 2. Add the dependency
 to use the library add this code any where :
 
 ```java
-GentlePalette.generate("#FFFFFF",${Any Colors Array},this::userTheRounededColor);
+int rounded = GentlePalette.round(Color.parseColor("#FFFFFF"), Palettes.MATERIAL_COLORS);
 ```
+
+The input's alpha channel is ignored and the returned color is always fully opaque. Similarity is measured with the redmean-weighted color distance, a low-cost approximation of perceived color difference.
 
 or you can use one of my predefined color palettes :
 
